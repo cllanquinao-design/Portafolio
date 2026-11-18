@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de Carlos Llanquinao — modelado 3D y desarrollo de videojuegos.">
+  <title>Carl — 3D Artist & Game Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#inicio"><span class="brand-mark">C<span>.</span></span><span>CARL / 3D ARTIST</span></a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#modelos">Modelos 3D</a><a href="#proyectos">Proyectos</a><a href="#sobre-mi">Sobre mí</a>
+      </nav>
+      <a class="nav-cta" href="#contacto">Hablemos <span>↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> PORTAFOLIO / 3D & VIDEOJUEGOS</p>
+          <h1>Diseño mundos.<br><span class="outlined">Creo</span> universos<span class="accent">.</span></h1>
+          <p class="hero-description">Soy <strong>Carlos Llanquinao, conocido como Carl</strong>. Me interesa el modelado 3D y la creación de experiencias interactivas para videojuegos y realidad virtual.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#modelos">Explorar modelos <span>↓</span></a>
+            <a class="text-link" href="#contacto">Contactar <span>↗</span></a>
+          </div>
+          <div class="hero-meta"><span>BLENDER</span><i></i><span>UNITY</span><i></i><span>UNREAL ENGINE</span><i></i><span>VR / XR</span></div>
+        </div>
+        <div class="hero-art" aria-label="Composición abstracta 3D">
+          <div class="art-grid"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="hero-object"><div class="hero-object-inner"></div></div>
+          <div class="floating-card card-code"><span class="card-label">3D WORKSPACE</span><strong>ASSET_001</strong><span class="build-status">● IN DEVELOPMENT</span></div>
+          <div class="floating-card card-coord">MESH: READY<br>RENDER: REALTIME<br>MODE: 3D</div>
+          <span class="art-cross cross-one">＋</span><span class="art-cross cross-two">＋</span>
+          <span class="art-caption">BUILDING WORLDS / ONE ASSET AT A TIME</span>
+        </div>
+        <div class="scroll-note"><span class="scroll-line"></span> SCROLL PARA EXPLORAR</div>
+      </section>
+
+      <section class="models section-wrap" id="modelos">
+        <div class="section-heading">
+          <div><p class="eyebrow">01 / GALERÍA INTERACTIVA</p><h2>Modelos 3D<span class="accent">.</span></h2></div>
+          <p class="section-intro">Explora mis piezas en tres dimensiones. Puedes rotar, acercar y observar cada modelo desde distintos ángulos.</p>
+        </div>
+        <div class="model-layout">
+          <div class="viewer-wrap">
+            <div class="viewer-top"><span>VIEWPORT_01</span><span class="live-label"><i></i> REALTIME VIEW</span></div>
+            <model-viewer src="models/tu-modelo.glb" alt="Modelo 3D de muestra" camera-controls auto-rotate rotation-per-second="18deg" shadow-intensity="1" exposure="1" environment-image="neutral" interaction-prompt="auto" loading="eager">
+              <div slot="poster" class="viewer-poster"><div class="placeholder-shape"><span>3D</span></div><p>Tu modelo aparecerá aquí</p><small>Agrega tu archivo .GLB en la carpeta /models</small></div>
+              <button slot="ar-button" class="ar-button">Ver en AR</button>
+            </model-viewer>
+            <div class="viewer-bottom"><span>DRAG TO ROTATE</span><span>SCROLL TO ZOOM</span><span>360°</span></div>
+          </div>
+          <aside class="model-details">
+            <p class="eyebrow">FEATURED ASSET / 001</p>
+            <h3>Nombre del<br><span class="muted">modelo 3D.</span></h3>
+            <p class="body-copy">Este espacio está preparado para presentar tu modelado principal. Reemplaza el archivo de ejemplo por tu propio modelo exportado desde Blender.</p>
+            <div class="detail-list"><div><span>FORMATO</span><strong>GLB / GLTF</strong></div><div><span>SOFTWARE</span><strong>Blender</strong></div><div><span>USO</span><strong>Game asset</strong></div></div>
+            <div class="tag-list"><span>3D MODELING</span><span>TEXTURIZADO</span><span>GAME READY</span></div>
+          </aside>
+        </div>
+        <p class="portfolio-note">TIP: reemplaza <code>models/tu-modelo.glb</code> por la ruta de tu archivo 3D.</p>
+      </section>
+
+      <section class="projects section-wrap" id="proyectos">
+        <div class="section-heading">
+          <div><p class="eyebrow">02 / EXPERIENCIA</p><h2>Proyectos<span class="accent">.</span></h2></div>
+          <p class="section-intro">Experiencias inmersivas y prototipos desarrollados para Meta Quest 3.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card"><div class="project-visual visual-shooter"><span class="visual-index">PROJECT_01</span><div class="crosshair">＋</div><span class="visual-caption">VR / ACTION</span></div><div class="project-info"><div><h3>Prototipo B — VR Shooter</h3><p>Prototipo para Meta Quest 3. Participé en el desarrollo del movimiento del jugador mediante teletransportación VR con XR Interaction Toolkit y C#.</p><div class="project-tags"><span>UNITY</span><span>C#</span><span>XR TOOLKIT</span></div></div></div></article>
+          <article class="project-card"><div class="project-visual visual-360a"><span class="visual-index">PROJECT_02</span><div class="sun"></div><div class="horizon"></div><span class="visual-caption">IMMERSIVE / 360°</span></div><div class="project-info"><div><h3>Experiencia A — Vídeo 360°</h3><p>Experiencia audiovisual inmersiva desarrollada para visualizar contenido de vídeo 360° en Meta Quest 3.</p><div class="project-tags"><span>VR</span><span>360 VIDEO</span><span>META QUEST 3</span></div></div></div></article>
+          <article class="project-card"><div class="project-visual visual-360b"><span class="visual-index">PROJECT_03</span><div class="rings"></div><span class="visual-caption">IMMERSIVE / 360°</span></div><div class="project-info"><div><h3>Experiencia C — Vídeo 360°</h3><p>Proyecto de vídeo 360° enfocado en ofrecer una experiencia visual envolvente en realidad virtual.</p><div class="project-tags"><span>VR</span><span>360 VIDEO</span><span>UNITY</span></div></div></div></article>
+        </div>
+      </section>
+
+      <section class="about section-wrap" id="sobre-mi">
+        <div class="about-index"><p class="eyebrow">03 / SOBRE MÍ</p><span class="big-index">03</span></div>
+        <div class="about-content"><h2>Del concepto<br><span class="muted">al mundo digital.</span></h2><p>Soy Carlos Llanquinao (Carl), desarrollador de videojuegos con interés en el modelado 3D, la creación de assets y las experiencias interactivas. He trabajado en equipo en prototipos de realidad virtual para Meta Quest 3, combinando herramientas de desarrollo y creación digital.</p><p>Me motiva aportar a equipos creativos, aprender nuevos flujos de trabajo y transformar ideas en experiencias jugables.</p></div>
+      </section>
+
+      <section class="skills section-wrap" id="habilidades">
+        <div class="section-heading"><div><p class="eyebrow">04 / HERRAMIENTAS</p><h2>Mi stack<span class="accent">.</span></h2></div><p class="section-intro">Tecnologías y herramientas utilizadas en mis procesos creativos y de desarrollo.</p></div>
+        <div class="skill-list">
+          <div class="skill-row"><span class="skill-num">01</span><h3>Modelado 3D</h3><p>Blender · Creación de assets</p><span class="skill-arrow">↗</span></div>
+          <div class="skill-row"><span class="skill-num">02</span><h3>Game development</h3><p>Unity · C# · Unreal Engine</p><span class="skill-arrow">↗</span></div>
+          <div class="skill-row"><span class="skill-num">03</span><h3>Realidad virtual</h3><p>Meta Quest 3 · XR Interaction Toolkit · Teletransportación VR</p><span class="skill-arrow">↗</span></div>
+          <div class="skill-row"><span class="skill-num">04</span><h3>Trabajo colaborativo</h3><p>GitHub · Prototipado en equipo</p><span class="skill-arrow">↗</span></div>
+        </div>
+      </section>
+
+      <section class="contact" id="contacto"><div class="contact-inner"><p class="eyebrow">05 / CONTACTO</p><h2>Hagamos algo<br>extraordinario<span class="accent">.</span></h2><a class="contact-button" href="mailto:tu-correo@ejemplo.com">Escríbeme <span>↗</span></a><p class="contact-hint">Reemplaza este correo por tu dirección de contacto.</p></div><div class="contact-decoration">LET'S<br>BUILD<br><span>WORLDS.</span></div></section>
+    </main>
+    <footer class="footer"><a class="brand" href="#inicio"><span class="brand-mark">C<span>.</span></span><span>CARL / 3D ARTIST</span></a><p>Modelando ideas. Construyendo experiencias.</p><div class="social-links"><a href="#contacto">GITHUB</a><a href="#contacto">ARTSTATION</a><a href="#contacto">LINKEDIN</a></div><span class="copyright">© 2026 CARLOS LLANQUINAO</span></footer>
+  </div>
+</body>
+</html>
